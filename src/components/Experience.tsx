@@ -6,13 +6,11 @@ const experiences = [
     company: "AWS Cloud Clubs MITU",
     period: "January 2024 - Present",
     location: "Tirupati, AP",
-    description: "Facilitated AWS Cloud Study Jam, Gen AI Study Jam, and Other Cloud computing Programs."
   },
   {
     title: "Project Lead",
     company: "AIIQ Trees Project",
     period: "2023",
-    description: "Developed an LLM-based question and answer system for AIIQ Trees, a T-shirt store, integrating MySQL database with natural language queries."
   }
 ];
 
@@ -45,7 +43,6 @@ const Experience = () => {
               {exp.location && (
                 <p className="text-gray-500">{exp.location}</p>
               )}
-              <p className="mt-2 text-gray-700">{exp.description}</p>
             </motion.div>
           ))}
         </div>
