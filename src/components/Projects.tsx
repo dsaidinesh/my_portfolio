@@ -68,16 +68,17 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
+              className="h-full flex"
             >
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50">
-                <CardHeader>
+              <Card className="flex flex-col w-full hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50">
+                <CardHeader className="flex-grow">
                   <div className="flex items-center gap-3 mb-2">
                     <project.icon className="w-6 h-6 text-primary" />
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                   </div>
-                  <CardDescription className="mt-2">{project.description}</CardDescription>
+                  <CardDescription className="mt-2 text-sm leading-relaxed">{project.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, i) => (
                       <Badge key={i} variant="secondary" className="text-xs bg-primary/10 text-primary hover:bg-primary/20">

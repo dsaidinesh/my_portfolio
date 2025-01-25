@@ -12,11 +12,12 @@ const About = () => {
         >
           About Me
         </motion.h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="bg-gray-50 p-8 rounded-lg shadow-sm"
           >
             <h3 className="text-2xl font-bold mb-4">Education</h3>
             <div className="space-y-4">
@@ -36,21 +37,13 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gray-50 p-6 rounded-lg"
+            className="bg-gray-50 p-8 rounded-lg shadow-sm"
           >
             <h3 className="text-2xl font-bold mb-4">Quick Facts</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                 Full Stack Developer with cloud expertise
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                AWS Certified Professional
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                Technical Coordinator at AWS Cloud Clubs
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
