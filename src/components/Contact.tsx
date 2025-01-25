@@ -34,7 +34,7 @@ const Contact = () => {
               Email Me
             </a>
             <a 
-              href="https://github.com/codeforgeeks"
+              href="https://github.com/dsaidinesh"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full inline-flex items-center"
@@ -42,7 +42,7 @@ const Contact = () => {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/saidineshd/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full inline-flex items-center"
