@@ -6,6 +6,7 @@ const experiences = [
     company: "AWS Cloud Clubs MITU",
     period: "January 2024 - Present",
     location: "Tirupati, AP",
+    description: "Facilitated AWS Cloud Study Jam, Gen AI Study Jam, and other Cloud computing Programs using Web, AWS Cloud, Git & Github, Gen AI."
   }
 ];
 
@@ -19,7 +20,7 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Professional Experience
+          Work Experience
         </motion.h2>
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, index) => (
@@ -35,9 +36,8 @@ const Experience = () => {
               <h3 className="text-xl font-bold">{exp.title}</h3>
               <p className="text-primary font-semibold">{exp.company}</p>
               <p className="text-gray-600">{exp.period}</p>
-              {exp.location && (
-                <p className="text-gray-500">{exp.location}</p>
-              )}
+              <p className="text-gray-500">{exp.location}</p>
+              <p className="text-gray-700 mt-2">{exp.description}</p>
             </motion.div>
           ))}
         </div>
