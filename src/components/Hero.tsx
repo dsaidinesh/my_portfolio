@@ -22,7 +22,7 @@ const Hero = () => {
         >
           Hi, I'm Dasariraju Sai Dinesh
           <br />
-          Full Stack Developer & Cloud Engineer
+          Python Developer & Applied AI Engineer
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

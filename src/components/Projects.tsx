@@ -5,22 +5,22 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Influence and Sponsorship Engagement Platform",
-    description: "Solved the problem of connecting sponsors and influencers by developing a web platform using Flask. Created dynamic and responsive designs with Flask and Bootstrap to enhance user experience.",
-    technologies: ["Flask", "Jinja2", "Bootstrap", "SQLite", "HTML", "JavaScript", "CSS"],
-    github: "saidinesh/isecp"
+    title: "TalkToPDF: Voice-Enabled Document Interaction",
+    description: "Developed an innovative voice-based conversational interface for PDF documents, enabling users to verbally query and receive spoken responses about document content. Implemented a robust document processing pipeline using LangChain for accurate question-answering and RAG capabilities. Features real-time voice visualization, interrupt capabilities, and multi-document context management.",
+    technologies: ["Python", "Flask", "LangChain", "PyMuPDF", "Sentence-Transformers", "React", "Web Speech API", "Chroma DB", "HuggingFace"],
+    github: "dsaidinesh/talktopdf"
   },
   {
-    title: "AIIQ Trees: Talk to a Database",
-    description: "Developed an LLM-based question and answer system for AIIQ Tees, a T-shirt store, to interact with their MySQL database using natural language queries. Conducted few-shot learning to improve query accuracy and system intelligence.",
-    technologies: ["Python", "Flask", "MySQL", "Google Palm API", "Hugging Face", "LangChain", "ChromaDB"],
-    github: "saidinesh/aiiq-bot"
+    title: "AI Interior Design Visualization",
+    description: "Created a custom ComfyUI workflow that enables users to visualize interior design ideas by combining room images with reference styles. Users provide two inputs: room image and style reference, which are processed to seamlessly apply the desired style to the room, offering tailored design previews.",
+    technologies: ["Python", "ComfyUI", "Stable Diffusion", "Image Processing", "UI/UX Design"],
+    github: "dsaidinesh/interiordesign"
   },
   {
-    title: "BSc Querybot",
-    description: "Developed a QA chain with retrieval and language model integration for generating precise and relevant responses to student queries. Integrated HuggingFaceEndpoint to utilize large language models for generating responses.",
-    technologies: ["Python", "Docker", "ChromaDB", "Hugging Face API", "Streamlit"],
-    github: "DSaiDinesh/streamlit"
+    title: "Custom LoRA Product Photography",
+    description: "Developed a specialized LoRA model trained on a dataset of product images in various angles and conditions. Integrated within ComfyUI workflow to generate realistic product visuals in different environments through simple prompts, streamlining professional-grade product photography creation.",
+    technologies: ["Python", "LoRA", "ComfyUI", "Machine Learning", "Computer Vision"],
+    github: "dsaidinesh/flux_lora_product"
   }
 ];
 
@@ -34,7 +34,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Featured Projects
+          AI & ML Projects
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
