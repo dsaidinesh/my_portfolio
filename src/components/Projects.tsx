@@ -1,26 +1,29 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Github } from "lucide-react";
+import { Github, Brain, Rocket, Code } from "lucide-react";
 
 const projects = [
   {
     title: "TalkToPDF: Voice-Enabled Document Interaction",
     description: "Developed an innovative voice-based conversational interface for PDF documents, enabling users to verbally query and receive spoken responses about document content. Implemented a robust document processing pipeline using LangChain for accurate question-answering and RAG capabilities. Features real-time voice visualization, interrupt capabilities, and multi-document context management.",
     technologies: ["Python", "Flask", "LangChain", "PyMuPDF", "Sentence-Transformers", "React", "Web Speech API", "Chroma DB", "HuggingFace"],
-    github: "dsaidinesh/talktopdf"
+    github: "dsaidinesh/talktopdf",
+    icon: Brain
   },
   {
     title: "AI Interior Design Visualization",
     description: "Created a custom ComfyUI workflow that enables users to visualize interior design ideas by combining room images with reference styles. Users provide two inputs: room image and style reference, which are processed to seamlessly apply the desired style to the room, offering tailored design previews.",
     technologies: ["Python", "ComfyUI", "Stable Diffusion", "Image Processing", "UI/UX Design"],
-    github: "dsaidinesh/interiordesign"
+    github: "dsaidinesh/interiordesign",
+    icon: Rocket
   },
   {
     title: "Custom LoRA Product Photography",
     description: "Developed a specialized LoRA model trained on a dataset of product images in various angles and conditions. Integrated within ComfyUI workflow to generate realistic product visuals in different environments through simple prompts, streamlining professional-grade product photography creation.",
     technologies: ["Python", "LoRA", "ComfyUI", "Machine Learning", "Computer Vision"],
-    github: "dsaidinesh/flux_lora_product"
+    github: "dsaidinesh/flux_lora_product",
+    icon: Code
   }
 ];
 
@@ -45,15 +48,18 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50">
                 <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <div className="flex items-center gap-3 mb-2">
+                    <project.icon className="w-6 h-6 text-primary" />
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                  </div>
                   <CardDescription className="mt-2">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="secondary" className="text-xs">
+                      <Badge key={i} variant="secondary" className="text-xs bg-primary/10 text-primary hover:bg-primary/20">
                         {tech}
                       </Badge>
                     ))}

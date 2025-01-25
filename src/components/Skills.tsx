@@ -1,27 +1,39 @@
 import { motion } from "framer-motion";
+import { Brain, Code, Cloud, Database, Award } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Languages",
-    skills: ["Python (Advanced)", "Java (Advanced)", "JavaScript", "HTML/CSS", "PHP"]
+    title: "Languages & Core Skills",
+    skills: ["Python (Advanced)", "Java (Advanced)", "JavaScript", "HTML/CSS", "PHP"],
+    icon: Code
   },
   {
-    title: "Frameworks & Libraries",
-    skills: ["React", "Flask", "Bootstrap", "NumPy", "Pandas"]
+    title: "AI & ML",
+    skills: ["LangChain", "HuggingFace", "PyTorch", "Stable Diffusion", "RAG"],
+    icon: Brain
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS Services", "Docker", "Git", "CI/CD"]
+    skills: ["AWS Services", "Docker", "Git", "CI/CD"],
+    icon: Cloud
   },
   {
-    title: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL"]
+    title: "Databases & Tools",
+    skills: ["MySQL", "MongoDB", "PostgreSQL", "ChromaDB"],
+    icon: Database
   }
+];
+
+const achievements = [
+  "First Prize Winner at National Technex 2024",
+  "AWS Certified Professional",
+  "Technical Coordinator at AWS Cloud Clubs",
+  "Published Research Paper on AI Applications"
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -29,9 +41,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Skills & Technologies
+          Skills & Achievements
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -39,20 +52,50 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-50 p-6 rounded-lg"
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <h3 className="text-xl font-bold mb-4">{category.title}</h3>
-              <ul className="space-y-2">
+              <div className="flex items-center gap-3 mb-4">
+                <category.icon className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-bold">{category.title}</h3>
+              </div>
+              <ul className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <li key={skillIndex} className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {skill}
+                  <li key={skillIndex} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-gray-700">{skill}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-white p-8 rounded-lg shadow-lg"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <Award className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-bold">Achievements</h3>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg"
+              >
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <span className="text-gray-700">{achievement}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
