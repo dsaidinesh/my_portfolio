@@ -6,11 +6,6 @@ const experiences = [
     company: "AWS Cloud Clubs MITU",
     period: "January 2024 - Present",
     location: "Tirupati, AP",
-  },
-  {
-    title: "Project Lead",
-    company: "AIIQ Trees Project",
-    period: "2023",
   }
 ];
 
