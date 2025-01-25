@@ -14,7 +14,7 @@ const skillCategories = [
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS Services", "Docker", "Git", "CI/CD"],
+    skills: ["AWS Services", "Docker", "Git"],
     icon: Cloud
   },
   {
