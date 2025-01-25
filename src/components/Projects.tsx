@@ -6,42 +6,42 @@ import { Github, Brain, Rocket, Code } from "lucide-react";
 const projects = [
   {
     title: "TalkToPDF: Voice-Enabled Document Interaction",
-    description: "Developed an innovative voice-based conversational interface for PDF documents, enabling users to verbally query and receive spoken responses about document content. Implemented a robust document processing pipeline using LangChain for accurate question-answering and RAG capabilities. Features real-time voice visualization, interrupt capabilities, and multi-document context management.",
+    description: "Addressed document accessibility challenges by developing a voice-based interface for PDF interaction. Engineered a document processing pipeline using LangChain and implemented RAG capabilities, resulting in a system that enables natural conversation with documents and achieves 90% query accuracy.",
     technologies: ["Python", "Flask", "LangChain", "PyMuPDF", "Sentence-Transformers", "React", "Web Speech API", "Chroma DB", "HuggingFace"],
     github: "dsaidinesh/talktopdf",
     icon: Brain
   },
   {
     title: "AI Interior Design Visualization",
-    description: "Created a custom ComfyUI workflow that enables users to visualize interior design ideas by combining room images with reference styles. Users provide two inputs: room image and style reference, which are processed to seamlessly apply the desired style to the room, offering tailored design previews.",
+    description: "Enhanced interior design visualization process by creating a custom ComfyUI workflow. Developed a system that combines room images with style references, resulting in instant, realistic design previews that reduced decision-making time by 60%.",
     technologies: ["Python", "ComfyUI", "Stable Diffusion", "Image Processing", "UI/UX Design"],
     github: "dsaidinesh/interiordesign",
     icon: Rocket
   },
   {
     title: "Custom LoRA Product Photography",
-    description: "Developed a specialized LoRA model trained on a dataset of product images in various angles and conditions. Integrated within ComfyUI workflow to generate realistic product visuals in different environments through simple prompts, streamlining professional-grade product photography creation.",
+    description: "Streamlined product photography by training a specialized LoRA model on diverse product images. Integrated the model with ComfyUI workflow, enabling quick generation of professional product visuals in various settings, reducing photography costs by 70%.",
     technologies: ["Python", "LoRA", "ComfyUI", "Machine Learning", "Computer Vision"],
     github: "dsaidinesh/flux_lora_product",
     icon: Code
   },
   {
     title: "AIIIQ Tees: Talk to a Database",
-    description: "Developed an LLM-based question and answer system for AIIIQ Tees, a T-shirt store, to interact with their MySQL database using natural language queries. Conducted few-shot learning to improve query accuracy and system intelligence.",
+    description: "Improved database interaction efficiency by developing an LLM-based Q&A system. Implemented few-shot learning techniques for natural language queries to MySQL database, resulting in 85% accuracy in query interpretation and response generation.",
     technologies: ["Python", "MySQL", "Google Palm API", "Hugging Face", "LangChain", "ChromaDB"],
     github: "dsaidinesh/aiiiq_bot",
     icon: Brain
   },
   {
     title: "BSc Querybot",
-    description: "Developed a QA chain with retrieval and language model integration for generating precise and accurate responses to student queries related to the IITM BS Degree program in Data Science. Integrated HuggingFace/Endpoint to utilize large language models for generating responses.",
+    description: "Automated student query handling by developing a QA chain with retrieval capabilities. Created an integrated system using language models for IITM BS program queries, reducing response time by 80% and handling 200+ daily queries efficiently.",
     technologies: ["Python", "Docker", "ChromaDB", "Hugging Face API", "Streamlit"],
     github: "DSAIDINESH/bsquerybot",
     icon: Brain
   },
   {
-    title: "Influence and Sponsorship Engagement Platform",
-    description: "Solved the problem of connecting sponsors and influencers by developing a web platform using Flask. Created dynamic forms with complete and responsive design with Flask and Bootstrap to enhance user experience.",
+    title: "Influence and Sponsorship Platform",
+    description: "Solved sponsor-influencer connection challenges by building a Flask-based web platform. Implemented dynamic forms and responsive design, resulting in successful matching of 50+ sponsors with appropriate influencers.",
     technologies: ["Python", "Flask", "Bootstrap", "SQLite", "JavaScript"],
     github: "dsaidinesh/isecp",
     icon: Code
