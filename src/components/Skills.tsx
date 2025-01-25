@@ -25,10 +25,10 @@ const skillCategories = [
 ];
 
 const achievements = [
-  "First Prize Winner at National Technex 2024",
-  "AWS Certified Professional",
-  "Technical Coordinator at AWS Cloud Clubs",
-  "Published Research Paper on AI Applications"
+  {
+    title: "First Prize Winner at National Technex 2024",
+    description: "Won first prize for developing a wearable communication device for rapid incident reporting, demonstrating innovative use of sensor technology and speech synthesis"
+  }
 ];
 
 const Skills = () => {
@@ -78,9 +78,9 @@ const Skills = () => {
         >
           <div className="flex items-center gap-3 mb-6">
             <Award className="w-6 h-6 text-primary" />
-            <h3 className="text-2xl font-bold">Achievements</h3>
+            <h3 className="text-2xl font-bold">Achievement</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-6">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
@@ -88,10 +88,10 @@ const Skills = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg"
+                className="p-6 bg-gray-50 rounded-lg"
               >
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
-                <span className="text-gray-700">{achievement}</span>
+                <h4 className="text-lg font-semibold mb-2">{achievement.title}</h4>
+                <p className="text-gray-700">{achievement.description}</p>
               </motion.div>
             ))}
           </div>

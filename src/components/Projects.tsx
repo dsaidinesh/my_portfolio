@@ -24,6 +24,27 @@ const projects = [
     technologies: ["Python", "LoRA", "ComfyUI", "Machine Learning", "Computer Vision"],
     github: "dsaidinesh/flux_lora_product",
     icon: Code
+  },
+  {
+    title: "AIIIQ Tees: Talk to a Database",
+    description: "Developed an LLM-based question and answer system for AIIIQ Tees, a T-shirt store, to interact with their MySQL database using natural language queries. Conducted few-shot learning to improve query accuracy and system intelligence.",
+    technologies: ["Python", "MySQL", "Google Palm API", "Hugging Face", "LangChain", "ChromaDB"],
+    github: "dsaidinesh/aiiiq_bot",
+    icon: Brain
+  },
+  {
+    title: "BSc Querybot",
+    description: "Developed a QA chain with retrieval and language model integration for generating precise and accurate responses to student queries related to the IITM BS Degree program in Data Science. Integrated HuggingFace/Endpoint to utilize large language models for generating responses.",
+    technologies: ["Python", "Docker", "ChromaDB", "Hugging Face API", "Streamlit"],
+    github: "DSAIDINESH/bsquerybot",
+    icon: Brain
+  },
+  {
+    title: "Influence and Sponsorship Engagement Platform",
+    description: "Solved the problem of connecting sponsors and influencers by developing a web platform using Flask. Created dynamic forms with complete and responsive design with Flask and Bootstrap to enhance user experience.",
+    technologies: ["Python", "Flask", "Bootstrap", "SQLite", "JavaScript"],
+    github: "dsaidinesh/isecp",
+    icon: Code
   }
 ];
 
